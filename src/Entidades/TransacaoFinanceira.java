@@ -5,16 +5,20 @@ import enums.Categoria;
 import java.time.LocalDate;
 
 public abstract class TransacaoFinanceira {
+    private int id;
     private double valor;
     private LocalDate data;
     private String descricao;
     private Categoria categoria;
 
-    public TransacaoFinanceira(double valor, LocalDate data, String descricao, Categoria categoria) {
+
+    public TransacaoFinanceira(int id, double valor, LocalDate data, String descricao, Categoria categoria ) {
+        this.id = id;
         this.valor = valor;
         this.data = data;
         this.descricao = descricao;
         this.categoria = categoria;
+
     }
 
     public double getValor() {
@@ -49,10 +53,19 @@ public abstract class TransacaoFinanceira {
         this.categoria = categoria;
     }
 
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
     @Override
     public String toString() {
-        return "TransacaoFinanceira{" +
-                "valor: " + valor +
+        return "Transação{" +
+                "id: " + id +
+                ", valor: " + valor +
                 ", data: " + data +
                 ", descricao: " + descricao  +
                 ", categorias: " + categoria +
