@@ -24,4 +24,3 @@ public enum Categoria {
         return name() + " - " + descricao;
     }
 }
-// <= =
