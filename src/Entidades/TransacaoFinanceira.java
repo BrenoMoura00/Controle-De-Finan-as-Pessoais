@@ -11,7 +11,6 @@ public abstract class TransacaoFinanceira {
     private String descricao;
     private Categoria categoria;
 
-
     public TransacaoFinanceira(int id, double valor, LocalDate data, String descricao, Categoria categoria ) {
         this.id = id;
         this.valor = valor;
@@ -19,6 +18,9 @@ public abstract class TransacaoFinanceira {
         this.descricao = descricao;
         this.categoria = categoria;
 
+    }
+
+    public TransacaoFinanceira() {
     }
 
     public double getValor() {
